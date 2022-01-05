@@ -12,7 +12,6 @@ function NavHeader() {
                         <Nav className="me-auto">
                             <Nav.Link href="/moodpage">Choose a New Mood</Nav.Link>
                             <Nav.Link href="/dailysong">Song of the Day</Nav.Link>
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

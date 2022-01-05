@@ -7,7 +7,7 @@ function Seasonal() {
         <div>
             <h1>Seasonallll</h1>
             <div>
-                <h5>Embed playlist here</h5>
+                <iframe width="600" height="600" src="https://www.youtube.com/embed/videoseries?list=PLI5YP4PZ67tI0eU4fWbrlDljID2Be6TOz&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <Stars />
             </div>
             <div className="bio-text">

@@ -31,7 +31,7 @@ function MoodPage({ useNavigate }) {
         navigate('/freaky')
     }
 
-    function handleSeasonal(e){
+    function handleSeasonal(e) {
         e.preventDefault();
         navigate('/seasonal')
     }
@@ -42,16 +42,16 @@ function MoodPage({ useNavigate }) {
             <div>
                 <Container >
                     <Row className="mood-row" lg={2}>
-                    <Button className="mood-button" onClick={handleSad} >Sad</Button>                
-                    <Button className="mood-button" onClick={handleHappy} >Happy</Button> 
-                    <Button className="mood-button" onClick={handleAngry} >Angry</Button>                  
-                    <Button className="mood-button" onClick={handleChill}>Chill</Button>
-                    <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
-                    <Button className="mood-button" onClick={handleSeasonal} >Seasonal</Button>
+                        <Button className="mood-button" onClick={handleSad} >Sad</Button>
+                        <Button className="mood-button" onClick={handleHappy} >Happy</Button>
+                        <Button className="mood-button" onClick={handleAngry} >Angry</Button>
+                        <Button className="mood-button" onClick={handleChill}>Chill</Button>
+                        <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
+                        <Button className="mood-button" onClick={handleSeasonal} >Seasonal</Button>
                     </Row>
                 </Container>
             </div>
-            
+
             {/* <div className="text-container">
             <h2 className='sad-text'>When you real sad</h2>
             <h2 className='hide'>When you real happy</h2>
