@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+html body{
+    background-color: rgb(53, 53, 53);
+}
 
 .App-header {
   background-color: #282c34;
@@ -23,6 +26,7 @@ input[type='radio']{
 
 .star-text{
   margin-top: -2px;
+  color:rgb(214, 148, 214);
 }
 
 .star:hover{
@@ -63,4 +67,38 @@ margin-inline:unset;
 
 .sad-button:hover .sad-text{
   visibility: hidden;
+}
+
+h1{
+  color:thistle;
+}
+
+.bio-text{
+  color:whitesmoke;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cat-pics{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.artist-links{
+display: inline;
+margin-left: 10px;
+margin-right: 10px;
+}
+.anchor:visited{
+  color:rgb(190, 141, 149)
+}
+.anchor:link{
+  color:pink
+}
+
+.anchor:hover{
+  color:rgb(111, 148, 251)
 }

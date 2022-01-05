@@ -13,7 +13,11 @@ function Seasonal() {
             <div className="bio-text">
                 <p>Definition of Seasonal - </p>
             </div>
-            {/* <img src={freakyCat} alt="freakin" /> */}
+            <div>
+                <p className="artist-links"> <a className="anchor" href='' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="" target="blank">Wikipedia</a></p>
+            </div>
+            {/* <img className="cat-pics"  src={freakyCat} alt="freakin" /> */}
         </div>
     )
 }

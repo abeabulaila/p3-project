@@ -12,7 +12,11 @@ function Happy() {
             <div className="bio-text">
                 <p>Definition of Happy - </p>
             </div>
-            <img src={happyCat} alt="meowwwwww" />
+            <div>
+                <p className="artist-links"> <a className="anchor" href='' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="" target="blank">Wikipedia</a></p>
+            </div>
+            <img className="cat-pics" src={happyCat} alt="meowwwwww" />
         </div>
     )
 }

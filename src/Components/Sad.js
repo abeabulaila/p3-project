@@ -12,7 +12,11 @@ function Sad() {
             <div className="bio-text">
                 <p>Definition of Sad - </p>
             </div>
-            <img src={sadCat} alt="sad meowwww" />
+            <div>
+                <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/6378-Gorillaz' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="https://en.wikipedia.org/wiki/Gorillaz" target="blank">Wikipedia</a></p>
+            </div>
+            <img className="cat-pics" src={sadCat} alt="sad meowwww" />
         </div>
     )
 }

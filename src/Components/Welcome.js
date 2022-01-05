@@ -14,10 +14,10 @@ function Welcome() {
         <div>
             <h1> Welcome to Muse Mood</h1>
             <div>
-                <Button  variant='primary' onClick={handleClick}> Click to Enter! </Button>
+                <Button variant='primary' onClick={handleClick}> Click to Enter! </Button>
                 <h5>Put app logo or image here...</h5>
             </div>
-         
+
         </div>
     )
 }

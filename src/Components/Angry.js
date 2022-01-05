@@ -13,7 +13,11 @@ function Angry() {
             <div className="bio-text">
                 <p>Definition of Angry -  </p>
             </div>
-            <img src={angryCat} alt="anger" />
+            <div>
+                <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/12212-Rage-Against-The-Machine' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="https://en.wikipedia.org/wiki/Rage_Against_the_Machine" target="blank">Wikipedia</a></p>
+            </div>
+            <img className="cat-pics" src={angryCat} alt="anger" />
         </div>
     )
 }

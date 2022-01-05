@@ -30,10 +30,14 @@ function Chill() {
                 <Stars />
             </div>
             <div className="bio-text">
-                <p> Definition of Chill - adjective: having a laid-back or easy demeanor. This playlist effectively settles into this defintiion because of reasons and stuff, this is mostly just fluff so i can see how it all looks when its all filled out with proper information. GAS is a legend tho and a new album just came out and its been on repeat nonstop. The 90s legend continues to bring the BANGERS out here and I want more. Enjoy the playlist xoxoxox hope ya like it!
+                <p> Definition of Chill - adjective: having a laid-back or easy demeanor. This playlist effectively settles into this defintiion because of reasons and stuff, this is mostly just fluff so i can see how it all looks when its all filled out with proper information. GAS is a legend tho and a new album just came out and its been on repeat nonstop. The 90s legend continues to bring the BANGERS out here and I want more. Enjoy the playlist hope ya like it!
                 </p>
             </div>
-            <img src={chillCat} alt="chillin" />
+            <div >
+                <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/4986-Gas' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="https://en.wikipedia.org/wiki/Gas_(musician)" target="blank">Wikipedia</a></p>
+            </div>
+            <img className="cat-pics" src={chillCat} alt="chillin" />
         </div>
     )
 }
