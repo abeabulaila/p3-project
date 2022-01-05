@@ -10,7 +10,7 @@ function Angry() {
                 <h5>Embed playlist here</h5>
                 <Stars />
             </div>
-            <img src={angryCat} />
+            <img src={angryCat} alt = "anger"/>
         </div>
     )
 }

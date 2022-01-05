@@ -9,7 +9,7 @@ function Happy() {
                 <h5>Embed playlist here</h5>
                 <Stars />
             </div>
-            <img src={happyCat} />
+            <img src={happyCat} alt="meowwwwww" />
         </div>
     )
 }

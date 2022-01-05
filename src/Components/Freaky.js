@@ -10,7 +10,7 @@ function Freaky() {
                 <h5>Embed playlist here</h5>
                 <Stars />
             </div>
-            <img src={freakyCat} />
+            <img src={freakyCat} alt="freakin" />
         </div>
     )
 }

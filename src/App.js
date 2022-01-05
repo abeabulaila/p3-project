@@ -6,12 +6,15 @@ import Freaky from './Components/Freaky';
 import Angry from './Components/Angry';
 import Happy from './Components/Happy';
 import Chill from './Components/Chill';
+import Navbar from './Components/NavHeader';
+import DailySong from './Components/DailySong';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
 import './App.css';
 
 function App() {
   return (
    <Router>
+     <Navbar />
      <div className="App">
        <Routes>
          <Route path="/" element={<Welcome />} />
@@ -21,6 +24,7 @@ function App() {
          <Route path="/happy" element={<Happy />} />
          <Route path="/angry" element={<Angry />} />
          <Route path="/freaky" element={<Freaky />} />
+         <Route path="/dailysong" element={<DailySong />} />
        </Routes>
      </div>
    </Router> 

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
+import { Container, Row, Button } from 'react-bootstrap';
 
 
 function MoodPage({ useNavigate }) {
@@ -8,6 +8,7 @@ function MoodPage({ useNavigate }) {
     function handleChill(e) {
         e.preventDefault();
         navigate('/chill')
+
     }
 
     function handleSad(e) {
@@ -34,15 +35,20 @@ function MoodPage({ useNavigate }) {
         <div>
             <h1>What's Your Mood Today?</h1>
             <div>
-                <Button onClick={handleSad} >Sad</Button>
-                <br></br>
-                <Button onClick={handleHappy} >Happy</Button>
-                <br></br>
-                <Button onClick={handleAngry} >Angry</Button>
-                <br></br>
-                <Button onClick={handleChill}>Chill</Button>
-                <br></br>
-                <Button onClick={handleFreaky} >Freaky</Button>
+                <Container>
+                    <Row sm ={2}>
+                    <Button className="mood-button" onClick={handleSad} >Sad</Button>
+                    <br></br>
+                    <Button className="mood-button" onClick={handleHappy} >Happy</Button>
+                    <br></br>
+                    <Button className="mood-button" onClick={handleAngry} >Angry</Button>
+                    <br></br>
+                    <Button className="mood-button" onClick={handleChill}>Chill</Button>
+                    <br></br>
+                    <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
+                    <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
+                    </Row>
+                </Container>
             </div>
         </div>
 
