@@ -52,3 +52,20 @@ iframe{
   background: #fafafa;
   
 }
+
+.mood-row{
+  padding-top: 50px;
+  padding-left: 500px;
+  padding-right: 500px;
+}
+.hide{
+  display: none;
+}
+
+ .sad-text{
+  visibility: visible;
+}
+
+.sad-button:hover .sad-text{
+  visibility: hidden;
+}

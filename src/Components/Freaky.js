@@ -1,6 +1,6 @@
 import React from "react";
 import Stars from "./Stars";
-import freakyCat from'./Gifs/freakycat.gif'
+import freakyCat from './Gifs/freakycat.gif'
 
 function Freaky() {
     return (
@@ -9,6 +9,9 @@ function Freaky() {
             <div>
                 <h5>Embed playlist here</h5>
                 <Stars />
+            </div>
+            <div className="bio-text">
+                "put bio here"
             </div>
             <img src={freakyCat} alt="freakin" />
         </div>

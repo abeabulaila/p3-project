@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Button } from 'react-bootstrap';
+import { Container, Row, Button, Column } from 'react-bootstrap';
 
 
 function MoodPage({ useNavigate }) {
@@ -35,21 +35,27 @@ function MoodPage({ useNavigate }) {
         <div>
             <h1>What's Your Mood Today?</h1>
             <div>
-                <Container>
-                    <Row sm ={2}>
-                    <Button className="mood-button" onClick={handleSad} >Sad</Button>
-                    <br></br>
-                    <Button className="mood-button" onClick={handleHappy} >Happy</Button>
-                    <br></br>
-                    <Button className="mood-button" onClick={handleAngry} >Angry</Button>
-                    <br></br>
-                    <Button className="mood-button" onClick={handleChill}>Chill</Button>
-                    <br></br>
-                    <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
-                    <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
+                <Container >
+                    <Row className="mood-row" lg={2}>
+                    <Button  onClick={handleSad} >Sad</Button>                
+                    <Button onClick={handleHappy} >Happy</Button> 
+                    <Button onClick={handleAngry} >Angry</Button>                  
+                    <Button onClick={handleChill}>Chill</Button>
+                    <Button onClick={handleFreaky} >Freaky</Button>
+                    <Button onClick={handleFreaky} >Freaky</Button>
                     </Row>
                 </Container>
             </div>
+            
+            {/* <div className="text-container">
+            <h2 className='sad-text'>When you real sad</h2>
+            <h2 className='hide'>When you real happy</h2>
+            <h2 className='hide'>When you real angry</h2>
+            <h2 className='hide'>When you real chill</h2>
+            <h2 className='hide'>When you real freaky</h2>
+            <h2 className='hide'>When you real freaky</h2>
+            </div> */}
+
         </div>
 
     )
