@@ -30,7 +30,8 @@ function Chill() {
                 <Stars />
             </div>
             <div className="bio-text">
-                "put bio here"
+                <p> Definition of Chill - adjective: having a laid-back or easy demeanor.
+                </p>
             </div>
             <img src={chillCat} alt="chillin" />
         </div>

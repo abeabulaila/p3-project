@@ -36,15 +36,10 @@ iframe{
 .mood-button{
   margin-bottom: 20px;
   box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5); 
-  display: block;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    margin: 2em;
-    max-width: 30%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  margin-trim:inherit;
+margin-inline:unset;
 }
 
 .mood-button:hover{
@@ -55,8 +50,8 @@ iframe{
 
 .mood-row{
   padding-top: 50px;
-  padding-left: 500px;
-  padding-right: 500px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 .hide{
   display: none;

@@ -11,8 +11,8 @@ function Angry() {
                 <Stars />
             </div>
             <div className="bio-text">
-                "put bio here"
-            </div>
+            <p>Definition of Angry -  </p>            
+                </div>
             <img src={angryCat} alt="anger" />
         </div>
     )

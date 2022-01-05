@@ -11,7 +11,7 @@ function Freaky() {
                 <Stars />
             </div>
             <div className="bio-text">
-                "put bio here"
+                <p>Definition of Freaky - </p>
             </div>
             <img src={freakyCat} alt="freakin" />
         </div>

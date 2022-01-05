@@ -10,7 +10,7 @@ function Sad() {
                 <Stars />
             </div>
             <div className="bio-text">
-                "put bio here"
+            <p>Definition of Sad - </p>
             </div>
             <img src={sadCat} alt="sad meowwww" />
         </div>
