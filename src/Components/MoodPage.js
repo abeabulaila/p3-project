@@ -38,17 +38,25 @@ function MoodPage({ useNavigate }) {
     return (
         <div>
             <h1>What's Your Mood Today?</h1>
-            <div>
-                <Container >
-                    <Row className='mood-row'lg={2}>
-                        <Button className="mood-button" onClick={handleSad} >Sad</Button>
-                        <Button className="mood-button" onClick={handleHappy} >Happy</Button>
-                        <Button className="mood-button" onClick={handleAngry} >Angry</Button>
-                        <Button className="mood-button" onClick={handleChill}>Chill</Button>
-                        <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
-                        <Button className="mood-button" onClick={handleSeasonal} >Seasonal</Button>
-                    </Row>
-                </Container>
+            <div class="container overflow-hidden">
+                <div class="row gy-5">
+                    <div class="col-6">
+                    <Button class="p-3 border" className="mood-button" onClick={handleSad} >Sad</Button>                    </div>
+                    <div class="col-6">
+                    <Button class="p-3 border" className="mood-button" onClick={handleHappy} >Happy</Button>
+                    </div>
+                    <div class="col-6">
+                    <Button class="p-3 border" className="mood-button" onClick={handleAngry} >Angry</Button>
+                    </div>
+                    <div class="col-6">
+                    <Button class="p-3 border" className="mood-button" onClick={handleChill}>Chill</Button>
+                    </div>
+                    <div class="col-6">
+                    <Button class="p-3 border" className="mood-button" onClick={handleFreaky} >Freaky</Button>
+                    </div>
+                    <div class="col-6">
+                    <Button class="p-3 border" className="mood-button" onClick={handleSeasonal} >Seasonal</Button>                    </div>
+                </div>
             </div>
 
             {/* <div className="text-container">

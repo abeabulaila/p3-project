@@ -37,16 +37,6 @@ iframe{
   padding-bottom: -10em;
 }
 
-.mood-button{
-  margin-bottom: 20px;
-  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-  margin-trim:inherit;
-margin-inline:unset;
-
-}
-
 .mood-button:hover{
   transform: scale(1.1);
   background: #fafafa;
@@ -102,4 +92,19 @@ margin-right: 10px;
 
 .anchor:hover{
   color:rgb(111, 148, 251)
+}
+
+.mood-button:hover{
+  transform: scale(1.1);
+  background: #fafafa;
+}
+
+.mood-button{
+  width: 100px;
+}
+
+.row.gy-5{
+  margin-top: 50px;
+margin-left: 350px;
+margin-right: 350px;
 }
