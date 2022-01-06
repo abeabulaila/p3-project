@@ -1,8 +1,20 @@
 import React from "react";
 import Stars from "./Stars";
 import freakyCat from './Gifs/freakycat.gif'
-
+import { useState, useEffect } from "react";
 function Freaky() {
+
+    const [playlist, setPlaylist] = useState("")
+      useEffect(() => {
+        fetch("http://localhost:9292/freaky")
+          .then((r) => r.json())
+          .then((data) => {
+            //   console.log(data)
+              setPlaylist(data[0]);
+          });
+      }, []);
+      console.log(playlist)
+
     return (
         <div>
             <h1>Supafreak</h1>

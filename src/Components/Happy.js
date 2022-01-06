@@ -1,7 +1,22 @@
 import React from "react";
 import Stars from "./Stars";
 import happyCat from './Gifs/happycat.gif'
+import { useState, useEffect } from "react";
+
 function Happy() {
+
+    const [playlist, setPlaylist] = useState("")
+      useEffect(() => {
+        fetch("http://localhost:9292/happy")
+          .then((r) => r.json())
+          .then((data) => {
+            //   console.log(data)
+              setPlaylist(data[0]);
+          });
+      }, []);
+      console.log(playlist)
+
+
     return (
         <div>
             <h1>Don't Worry, Be Happy</h1>

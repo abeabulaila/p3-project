@@ -1,8 +1,21 @@
 import React from "react";
 import Stars from "./Stars";
 import angryCat from './Gifs/angrycat.gif'
-
+import { useState, useEffect } from "react";
 function Angry() {
+
+    const [playlist, setPlaylist] = useState("")
+      useEffect(() => {
+        fetch("http://localhost:9292/angry")
+          .then((r) => r.json())
+          .then((data) => {
+            //   console.log(data)
+              setPlaylist(data[0]);
+          });
+      }, []);
+      console.log(playlist)
+
+
     return (
         <div>
             <h1>Be Worry, Don't Happy</h1>

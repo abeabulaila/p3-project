@@ -41,7 +41,7 @@ function MoodPage({ useNavigate }) {
             <h1>What's Your Mood Today?</h1>
             <div>
                 <Container >
-                    <Row className="mood-row" lg={2}>
+                    <Row className='mood-row' lg={2}>
                         <Button className="mood-button" onClick={handleSad} >Sad</Button>
                         <Button className="mood-button" onClick={handleHappy} >Happy</Button>
                         <Button className="mood-button" onClick={handleAngry} >Angry</Button>
@@ -53,7 +53,7 @@ function MoodPage({ useNavigate }) {
             </div>
 
             {/* <div className="text-container">
-            <h2 className='sad-text'>When you real sad</h2>
+            <h2 className='hide'>When you real sad</h2>
             <h2 className='hide'>When you real happy</h2>
             <h2 className='hide'>When you real angry</h2>
             <h2 className='hide'>When you real chill</h2>

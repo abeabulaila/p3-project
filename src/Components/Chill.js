@@ -1,13 +1,31 @@
 import React from "react";
 import Stars from "./Stars";
 import chillCat from './Gifs/chillcat.gif'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Chill() {
+
+    const [playlist, setPlaylist] = useState("")
+    useEffect(() => {
+      fetch("http://localhost:9292/chill")
+        .then((r) => r.json())
+        .then((data) => {
+          //   console.log(data)
+            setPlaylist(data[0]);
+        });
+    }, []);
+    console.log(playlist)
+
+
+
+
+
+
 
     // function randomNum(min, max) {
     //     return Math.floor(Math.random())
     // }
+
     // const [playlist, setPlaylist] = useState[randomNum(1, 2)]
 
     // function chooseList(){
