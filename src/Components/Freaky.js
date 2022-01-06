@@ -4,7 +4,7 @@ import freakyCat from './Gifs/freakycat.gif'
 import { useState, useEffect } from "react";
 function Freaky() {
 
-    const [playlist, setPlaylist] = useState("")
+    const [playlist, setPlaylist] = useState({artist:{}})
       useEffect(() => {
         fetch("http://localhost:9292/freaky")
           .then((r) => r.json())
@@ -23,11 +23,11 @@ function Freaky() {
                 <Stars />
             </div>
             <div className="bio-text">
-                <p>Definition of Freaky - </p>
+            <p>{playlist.artist.bio}</p>
             </div>
             <div>
-                <p className="artist-links"> <a className="anchor" href='' target="blank"> Discogs</a> </p>
-                <p className="artist-links"><a className="anchor" href="" target="blank">Wikipedia</a></p>
+                <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/release/703214-H%C3%A1t-V%E1%BB%9Bi-Qu%C3%AA-H%C6%B0%C6%A1ng-H%C3%A1t-V%E1%BB%9Bi-Qu%C3%AA-H%C6%B0%C6%A1ng' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="https://en.wikipedia.org/wiki/Holger_Hiller" target="blank">Wikipedia</a></p>
             </div>
             <img className="cat-pics" src={freakyCat} alt="freakin" />
         </div>

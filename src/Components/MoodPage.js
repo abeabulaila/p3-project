@@ -8,7 +8,6 @@ function MoodPage({ useNavigate }) {
     function handleChill(e) {
         e.preventDefault();
         navigate('/chill')
-
     }
 
     function handleSad(e) {
@@ -41,7 +40,7 @@ function MoodPage({ useNavigate }) {
             <h1>What's Your Mood Today?</h1>
             <div>
                 <Container >
-                    <Row className='mood-row' lg={2}>
+                    <Row className='mood-row'lg={2}>
                         <Button className="mood-button" onClick={handleSad} >Sad</Button>
                         <Button className="mood-button" onClick={handleHappy} >Happy</Button>
                         <Button className="mood-button" onClick={handleAngry} >Angry</Button>

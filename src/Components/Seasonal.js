@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 function Seasonal() {
 
-    const [playlist, setPlaylist] = useState("")
+    const [playlist, setPlaylist] = useState({artist:{}})
       useEffect(() => {
         fetch("http://localhost:9292/seasonal")
           .then((r) => r.json())
@@ -24,11 +24,11 @@ function Seasonal() {
                 <Stars />
             </div>
             <div className="bio-text">
-                <p>Definition of Seasonal - </p>
+            <p>{playlist.artist.bio}</p>
             </div>
             <div>
-                <p className="artist-links"> <a className="anchor" href='' target="blank"> Discogs</a> </p>
-                <p className="artist-links"><a className="anchor" href="" target="blank">Wikipedia</a></p>
+                <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/387397-Paysage-DHiver' target="blank"> Discogs</a> </p>
+                <p className="artist-links"><a className="anchor" href="https://en.wikipedia.org/wiki/Paysage_d%27Hiver" target="blank">Wikipedia</a></p>
             </div>
             {/* <img className="cat-pics"  src={freakyCat} alt="freakin" /> */}
         </div>

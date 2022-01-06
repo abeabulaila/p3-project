@@ -4,7 +4,7 @@ import angryCat from './Gifs/angrycat.gif'
 import { useState, useEffect } from "react";
 function Angry() {
 
-    const [playlist, setPlaylist] = useState("")
+    const [playlist, setPlaylist] = useState({artist:{}})
       useEffect(() => {
         fetch("http://localhost:9292/angry")
           .then((r) => r.json())
@@ -24,7 +24,7 @@ function Angry() {
                 <Stars />
             </div>
             <div className="bio-text">
-                <p>Definition of Angry -  </p>
+            <p>{playlist.artist.bio}</p>
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/12212-Rage-Against-The-Machine' target="blank"> Discogs</a> </p>
