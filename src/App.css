@@ -100,7 +100,9 @@ margin-right: 10px;
 }
 
 .mood-button{
-  width: 100px;
+  width: 150px;
+  height: 100px;
+  font-size: 200px;
 }
 
 .row.gy-5{

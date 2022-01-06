@@ -20,7 +20,7 @@ function Sad() {
         <div>
             <h1>I criiii</h1>
             <div>
-                <ReactPlayer url={playlist.url} controls={true} style={{
+                <ReactPlayer url={playlist.url} width={800} height={600} playing={true} controls={true} style={{
                     marginLeft: 'auto',
                     marginRight: 'auto',
                 }} />

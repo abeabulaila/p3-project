@@ -6,6 +6,7 @@ import ReactPlayer from "react-player";
 function Chill() {
 
     const [playlist, setPlaylist] = useState({artist:{}})
+
     useEffect(() => {
         fetch("http://localhost:9292/chill")
             .then((r) => r.json())
@@ -14,7 +15,7 @@ function Chill() {
                 setPlaylist(data[0]);
             });
     }, []);
-    
+
     // console.log(playlist)
 
     // function randomNum(min, max) {
@@ -39,7 +40,7 @@ function Chill() {
             <div>
             </div>
             <div>
-                <ReactPlayer url={playlist.url} controls={true} style={{
+                <ReactPlayer url={playlist.url} width={800} height={600} playing={true} controls={true} style={{
                     marginLeft: 'auto',
                     marginRight: 'auto',
                 }} />
