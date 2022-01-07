@@ -1,9 +1,21 @@
 import React from "react";
-import { Container, Row, Button, Column } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 
-
-function MoodPage({ useNavigate }) {
+function MoodPage() {
     let navigate = useNavigate();
+
+    // const [playlist, setPlaylist] = useState({artist: {}})
+    // const [playlist, setPlaylist] = useState({artist: {}})
+    // const [playlist, setPlaylist] = useState({artist: {}})
+    // const [playlist, setPlaylist] = useState({artist: {}})
+    // const [playlist, setPlaylist] = useState({artist: {}})
+    // const [sadList, setSadList] = useState({artist: {}})
+
+    function handleSad(e) {
+        e.preventDefault();
+        navigate('/sad')
+    }
 
     function handleChill(e) {
         e.preventDefault();
@@ -41,8 +53,9 @@ function MoodPage({ useNavigate }) {
             <div class="container overflow-hidden">
                 <div class="row gy-5">
                     <div class="col-6">
-                    <Button className="mood-button"  onClick={handleSad} >Sad</Button>                    </div>
-                    <div class="col-6">
+                    <Button className="mood-button" onClick={handleSad} >Sad</Button>                    
+                    </div>
+                      <div class="col-6">
                     <Button className="mood-button" onClick={handleHappy} >Happy</Button>
                     </div>
                     <div class="col-6">
@@ -55,7 +68,8 @@ function MoodPage({ useNavigate }) {
                     <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
                     </div>
                     <div class="col-6">
-                    <Button className="mood-button" onClick={handleSeasonal} >Seasonal</Button>                    </div>
+                    <Button className="mood-button" onClick={handleSeasonal} >Seasonal</Button>                    
+                </div> 
                 </div>
             </div>
 

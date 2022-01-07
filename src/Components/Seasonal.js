@@ -5,16 +5,16 @@ import { useState, useEffect } from "react";
 
 function Seasonal() {
 
-    const [playlist, setPlaylist] = useState({artist:{}})
-      useEffect(() => {
-        fetch("http://localhost:9292/seasonal")
-          .then((r) => r.json())
-          .then((data) => {
-            //   console.log(data)
-              setPlaylist(data[0]);
-          });
-      }, []);
-      console.log(playlist)
+    // const [playlist, setPlaylist] = useState({artist:{}})
+    //   useEffect(() => {
+    //     fetch("http://localhost:9292/seasonal")
+    //       .then((r) => r.json())
+    //       .then((data) => {
+    //         //   console.log(data)
+    //           setPlaylist(data[0]);
+    //       });
+    //   }, []);
+    //   console.log(playlist)
 
     return (
         <div>
@@ -24,7 +24,7 @@ function Seasonal() {
                 <Stars />
             </div>
             <div className="bio-text">
-            <p>{playlist.artist.bio}</p>
+            {/* <p>{playlist.artist.bio}</p> */}
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/387397-Paysage-DHiver' target="blank"> Discogs</a> </p>

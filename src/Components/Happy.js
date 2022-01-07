@@ -5,16 +5,16 @@ import { useState, useEffect } from "react";
 
 function Happy() {
 
-    const [playlist, setPlaylist] = useState({artist:{}})
-      useEffect(() => {
-        fetch("http://localhost:9292/happy")
-          .then((r) => r.json())
-          .then((data) => {
-            //   console.log(data)
-              setPlaylist(data[0]);
-          });
-      }, []);
-      console.log(playlist)
+    // const [playlist, setPlaylist] = useState({artist:{}})
+    //   useEffect(() => {
+    //     fetch("http://localhost:9292/happy")
+    //       .then((r) => r.json())
+    //       .then((data) => {
+    //         //   console.log(data)
+    //           setPlaylist(data[0]);
+    //       });
+    //   }, []);
+    //   console.log(playlist)
 
 
     return (
@@ -25,7 +25,7 @@ function Happy() {
                 <Stars />
             </div>
             <div className="bio-text">
-            <p>{playlist.artist.bio}</p>
+            {/* <p>{playlist.artist.bio}</p> */}
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/348256-Punkin-Machine' target="blank"> Discogs</a> </p>

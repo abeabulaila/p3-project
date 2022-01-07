@@ -4,16 +4,16 @@ import angryCat from './Gifs/angrycat.gif'
 import { useState, useEffect } from "react";
 function Angry() {
 
-    const [playlist, setPlaylist] = useState({artist:{}})
-      useEffect(() => {
-        fetch("http://localhost:9292/angry")
-          .then((r) => r.json())
-          .then((data) => {
-            //   console.log(data)
-              setPlaylist(data[0]);
-          });
-      }, []);
-      console.log(playlist)
+    // const [playlist, setPlaylist] = useState({artist:{}})
+    //   useEffect(() => {
+    //     fetch("http://localhost:9292/angry")
+    //       .then((r) => r.json())
+    //       .then((data) => {
+    //         //   console.log(data)
+    //           setPlaylist(data[0]);
+    //       });
+    //   }, []);
+    //   console.log(playlist)
 
 
     return (
@@ -24,7 +24,7 @@ function Angry() {
                 <Stars />
             </div>
             <div className="bio-text">
-            <p>{playlist.artist.bio}</p>
+            {/* <p>{playlist.artist.bio}</p> */}
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/12212-Rage-Against-The-Machine' target="blank"> Discogs</a> </p>

@@ -7,6 +7,7 @@ import ReactPlayer from "react-player";
 function Sad() {
 
     const [playlist, setPlaylist] = useState({artist:{}})
+    
     useEffect(() => {
         fetch("http://localhost:9292/sad")
             .then((r) => r.json())
@@ -24,7 +25,7 @@ function Sad() {
                     marginLeft: 'auto',
                     marginRight: 'auto',
                 }} />
-                <Stars />
+                <Stars playlist={playlist} setPlaylist={setPlaylist}/>
             </div>
             <div className="bio-text">
             <p>{playlist.artist.bio}</p>

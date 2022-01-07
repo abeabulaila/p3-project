@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { FaStar } from 'react-icons/fa';
 
-function Stars() {
+function Stars({ playlist }) {
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null)
 
-    const [playlist, setPlaylist] = useState({artist: {}})
-    useEffect(() => {
-        fetch("http://localhost:9292/sad")
-          .then((r) => r.json())
-          .then((data) => {
-            //   console.log(data)
-              setPlaylist(data[0]);
-          });
-      }, []);
-      console.log(playlist)
+    // const [playlist, setPlaylist] = useState({artist: {}})
 
-      
-      
+    // useEffect(() => {
+    //     fetch("http://localhost:9292/sad")
+    //       .then((r) => r.json())
+    //       .then((data) => {
+    //         //   console.log(data)
+    //           setPlaylist(data[0]);
+    //       });
+    //   }, []);
       
       return (
           <div className="star-div">
@@ -47,6 +44,7 @@ function Stars() {
                         onClick={() => {
                             setRating(ratingValue);
                             handleUpdateRating()
+                            console.log(rating)
                           }}
 
                     />

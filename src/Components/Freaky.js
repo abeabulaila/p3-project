@@ -4,16 +4,16 @@ import freakyCat from './Gifs/freakycat.gif'
 import { useState, useEffect } from "react";
 function Freaky() {
 
-    const [playlist, setPlaylist] = useState({artist:{}})
-      useEffect(() => {
-        fetch("http://localhost:9292/freaky")
-          .then((r) => r.json())
-          .then((data) => {
-            //   console.log(data)
-              setPlaylist(data[0]);
-          });
-      }, []);
-      console.log(playlist)
+    // const [playlist, setPlaylist] = useState({artist:{}})
+    //   useEffect(() => {
+    //     fetch("http://localhost:9292/freaky")
+    //       .then((r) => r.json())
+    //       .then((data) => {
+    //         //   console.log(data)
+    //           setPlaylist(data[0]);
+    //       });
+    //   }, []);
+    //   console.log(playlist)
 
     return (
         <div>
@@ -23,7 +23,7 @@ function Freaky() {
                 <Stars />
             </div>
             <div className="bio-text">
-            <p>{playlist.artist.bio}</p>
+            {/* <p>{playlist.artist.bio}</p> */}
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/release/703214-H%C3%A1t-V%E1%BB%9Bi-Qu%C3%AA-H%C6%B0%C6%A1ng-H%C3%A1t-V%E1%BB%9Bi-Qu%C3%AA-H%C6%B0%C6%A1ng' target="blank"> Discogs</a> </p>
