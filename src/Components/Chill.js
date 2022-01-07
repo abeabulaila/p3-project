@@ -3,36 +3,20 @@ import Stars from "./Stars";
 import chillCat from './Gifs/chillcat.gif'
 import { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
+
 function Chill() {
 
     const [playlist, setPlaylist] = useState({artist:{}})
 
     useEffect(() => {
-        fetch("http://localhost:9292/chill")
+        fetch("http://localhost:9292/playlist/Chill")
             .then((r) => r.json())
             .then((data) => {
-                //   console.log(data)
-                setPlaylist(data[0]);
+                let randomPlaylist = data[Math.floor(Math.random() * data.length)];
+                setPlaylist(randomPlaylist);
             });
     }, []);
 
-    // console.log(playlist)
-
-    // function randomNum(min, max) {
-    //     return Math.floor(Math.random())
-    // }
-
-    // const [playlist, setPlaylist] = useState[randomNum(1, 2)]
-
-    // function chooseList(){
-    //     setPlaylist(!playlist)
-    //     if (playlist === 1) {
-    //        setPlaylist(<h1>ChillOut</h1>)
-    //     }
-    //     else {
-    //        setPlaylist(<h2>Dont Chill</h2>)
-    //     }
-    // }
 
     return (
         <div>
@@ -44,7 +28,7 @@ function Chill() {
                     marginLeft: 'auto',
                     marginRight: 'auto',
                 }} />
-                <Stars />
+                <Stars playlist={playlist}/>
             </div>
             <div className="bio-text">
                 <p>{playlist.artist.bio}</p>

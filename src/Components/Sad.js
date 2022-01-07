@@ -3,19 +3,23 @@ import Stars from "./Stars";
 import sadCat from './Gifs/sadcat.gif'
 import { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
+import Comments from './Comments'
+import CommentList from "./CommentList";
 
 function Sad() {
 
     const [playlist, setPlaylist] = useState({artist:{}})
     
+    // fetch request to handle loading the playlist and music information
     useEffect(() => {
-        fetch("http://localhost:9292/sad")
-            .then((r) => r.json())
-            .then((data) => {
-                setPlaylist(data[0]);
-            });
-    }, []);
-    // console.log(playlist.artist.bio)
+        fetch(`http://localhost:9292/playlist/Sad`)
+          .then((r) => r.json())
+          .then((data) => {
+                // declare a variable randomPlaylist and randomly select an element from the server
+                let randomPlaylist = data[Math.floor(Math.random() * data.length)];
+                setPlaylist(randomPlaylist);
+          });
+      }, []);
 
     return (
         <div>
@@ -25,12 +29,17 @@ function Sad() {
                     marginLeft: 'auto',
                     marginRight: 'auto',
                 }} />
-                <Stars playlist={playlist} setPlaylist={setPlaylist}/>
+                <Stars playlist={playlist}/>
             </div>
             <div className="bio-text">
             <p>{playlist.artist.bio}</p>
             </div>
             <div>
+                {/* <div>
+                    <Comments />
+                </div> */}
+                
+               
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/6378-Gorillaz' target="blank"> Discogs</a> </p>
                 <p className="artist-links"><a className="anchor" href="https://en.wikipedia.org/wiki/Gorillaz" target="blank">Wikipedia</a></p>
             </div>

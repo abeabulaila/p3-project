@@ -50,36 +50,36 @@ function MoodPage() {
     return (
         <div>
             <h1>What's Your Mood Today?</h1>
-            <div class="container overflow-hidden">
-                <div class="row gy-5">
-                    <div class="col-6">
+            <div className="container overflow-hidden">
+                <div className="row gy-5">
+                    <div className="col-6">
                     <Button className="mood-button" onClick={handleSad} >Sad</Button>                    
                     </div>
-                      <div class="col-6">
+                      <div className="col-6">
                     <Button className="mood-button" onClick={handleHappy} >Happy</Button>
                     </div>
-                    <div class="col-6">
+                    <div className="col-6">
                     <Button className="mood-button" onClick={handleAngry} >Angry</Button>
                     </div>
-                    <div class="col-6">
+                    <div className="col-6">
                     <Button className="mood-button" onClick={handleChill}>Chill</Button>
                     </div>
-                    <div class="col-6">
+                    <div className="col-6">
                     <Button className="mood-button" onClick={handleFreaky} >Freaky</Button>
                     </div>
-                    <div class="col-6">
+                    <div className="col-6">
                     <Button className="mood-button" onClick={handleSeasonal} >Seasonal</Button>                    
                 </div> 
                 </div>
             </div>
 
-            {/* <div className="text-container">
-            <h2 className='hide'>When you real sad</h2>
-            <h2 className='hide'>When you real happy</h2>
-            <h2 className='hide'>When you real angry</h2>
-            <h2 className='hide'>When you real chill</h2>
-            <h2 className='hide'>When you real freaky</h2>
-            <h2 className='hide'>When you real freaky</h2>
+            {/* <div classNameName="text-container">
+            <h2 classNameName='hide'>When you real sad</h2>
+            <h2 classNameName='hide'>When you real happy</h2>
+            <h2 classNameName='hide'>When you real angry</h2>
+            <h2 classNameName='hide'>When you real chill</h2>
+            <h2 classNameName='hide'>When you real freaky</h2>
+            <h2 classNameName='hide'>When you real freaky</h2>
             </div> */}
 
         </div>

@@ -2,29 +2,34 @@ import React from "react";
 import Stars from "./Stars";
 import angryCat from './Gifs/angrycat.gif'
 import { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
+
 function Angry() {
+    const [angryPlaylist, setAngryPlaylist] = useState({artist:{}})
 
-    // const [playlist, setPlaylist] = useState({artist:{}})
-    //   useEffect(() => {
-    //     fetch("http://localhost:9292/angry")
-    //       .then((r) => r.json())
-    //       .then((data) => {
-    //         //   console.log(data)
-    //           setPlaylist(data[0]);
-    //       });
-    //   }, []);
-    //   console.log(playlist)
 
+    useEffect(() => {
+        fetch("http://localhost:9292/playlist/Angry")
+          .then((r) => r.json())
+          .then((data) => {
+                // declare a variable randomPlaylist and randomly select an element from the server
+                let randomPlaylist = data[Math.floor(Math.random() * data.length)];
+                setAngryPlaylist(randomPlaylist);
+          });
+      }, []);
 
     return (
         <div>
             <h1>Be Worry, Don't Happy</h1>
             <div>
-                <iframe width="600" height="600" src="https://www.youtube.com/embed/videoseries?list=PLI5YP4PZ67tLyMUKDwpxsHQ_1kXkNL4H8&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <Stars />
+                <ReactPlayer url={angryPlaylist.url} width={800} height={600} playing={true} controls={true} style={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                }} />
+                <Stars playlist={angryPlaylist}/>
             </div>
             <div className="bio-text">
-            {/* <p>{playlist.artist.bio}</p> */}
+            <p>{angryPlaylist.artist.bio}</p>
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/12212-Rage-Against-The-Machine' target="blank"> Discogs</a> </p>

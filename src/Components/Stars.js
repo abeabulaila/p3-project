@@ -23,7 +23,8 @@ function Stars({ playlist }) {
                 const ratingValue = i + 1
                 function handleUpdateRating() {
                   // add fetch request
-                  fetch(`http://localhost:9292/sad/${playlist.id}`, {
+                  fetch(`http://localhost:9292/playlists/${playlist.id}`, {
+      
                     method: "PATCH",
                     headers: {
                       "Content-Type": "application/json",

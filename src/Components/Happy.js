@@ -2,30 +2,34 @@ import React from "react";
 import Stars from "./Stars";
 import happyCat from './Gifs/happycat.gif'
 import { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
 
 function Happy() {
 
-    // const [playlist, setPlaylist] = useState({artist:{}})
-    //   useEffect(() => {
-    //     fetch("http://localhost:9292/happy")
-    //       .then((r) => r.json())
-    //       .then((data) => {
-    //         //   console.log(data)
-    //           setPlaylist(data[0]);
-    //       });
-    //   }, []);
-    //   console.log(playlist)
+    const [playlist, setPlaylist] = useState({artist:{}})
+      useEffect(() => {
+        fetch("http://localhost:9292/playlist/Happy")
+          .then((r) => r.json())
+          .then((data) => {
+            let randomPlaylist = data[Math.floor(Math.random() * data.length)];
+                setPlaylist(randomPlaylist);
+          });
+      }, []);
+      console.log(playlist)
 
 
     return (
         <div>
             <h1>Don't Worry, Be Happy</h1>
             <div>
-                <iframe width="600" height="600" src="https://www.youtube.com/embed/videoseries?list=PLI5YP4PZ67tIB_reEgvEQqmYZmWT9zK21&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <Stars />
+            <ReactPlayer url={playlist.url} width={800} height={600} playing={true} controls={true} style={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                }} />  
+                              <Stars playlist={playlist}/>
             </div>
             <div className="bio-text">
-            {/* <p>{playlist.artist.bio}</p> */}
+            <p>{playlist.artist.bio}</p>
             </div>
             <div>
                 <p className="artist-links"> <a className="anchor" href='https://www.discogs.com/artist/348256-Punkin-Machine' target="blank"> Discogs</a> </p>
