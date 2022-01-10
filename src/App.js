@@ -11,14 +11,8 @@ import Navbar from './Components/NavHeader';
 import DailySong from './Components/DailySong';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
-import { useState } from 'react';
-// import CommentList from './Components/CommentList';
 
 function App() {
-
-  
-
-
   return (
    <Router>
      <Navbar />
@@ -26,7 +20,7 @@ function App() {
        <Routes>
          <Route path="/" element={<Welcome />} />
          <Route path="/moodpage" element={<MoodPage />} />
-         <Route path="/chill" element={<Chill />} />
+         <Route path="/chill" element={<Chill  />} />
          <Route path="/sad" element={<Sad /> } />
          <Route path="/happy" element={<Happy />} />
          <Route path="/angry" element={<Angry />} />

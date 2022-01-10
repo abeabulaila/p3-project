@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 function NavHeader() {
     return (
@@ -12,6 +12,8 @@ function NavHeader() {
                         <Nav className="me-auto">
                             <Nav.Link href="/moodpage">Choose a New Mood</Nav.Link>
                             <Nav.Link href="/dailysong">Song of the Day</Nav.Link>
+                            <Nav.Link href="/dailysong">Learn More</Nav.Link>
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

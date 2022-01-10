@@ -22,11 +22,6 @@ function MoodPage() {
         navigate('/chill')
     }
 
-    function handleSad(e) {
-        e.preventDefault();
-        navigate('/sad')
-    }
-
     function handleAngry(e) {
         e.preventDefault();
         navigate('/angry')
